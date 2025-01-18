@@ -7,7 +7,7 @@ def get_attention(model, tokenizer, input_text, device):
     对输入文本进行编码，运行模型，并提取注意力权重。
 
     参数:
-        model: 已加载的T5模型。
+        model: 已加载的T5编码器模型。
         tokenizer: T5分词器。
         input_text (str): 输入文本。
         device (str): 计算设备。
@@ -31,3 +31,4 @@ def get_attention(model, tokenizer, input_text, device):
     tokens = tokenizer.convert_ids_to_tokens(input_ids[0])
     
     return attentions.cpu(), tokens
+
